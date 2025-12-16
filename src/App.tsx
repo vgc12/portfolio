@@ -255,7 +255,7 @@ export default function Portfolio() {
         name: "Zaid Abuisba",
         title: "Game Developer & Software Engineering Student",
         bio: "Passionate about creating immersive gaming experiences through code. Currently studying software development with a focus on game design and interactive media.",
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+        imageUrl: "src/assets/zaid-abuisba.jpg",
         socialLinks: [
             { href: "https://github.com/vgc12", icon: GithubIcon, label: "GitHub" },
             { href: "https://www.linkedin.com/in/zaid-abuisba-ab088826a/", icon: LinkedinIcon, label: "LinkedIn" },
@@ -293,6 +293,33 @@ export default function Portfolio() {
             tags: ["Unity Engine", "C#", "2D"],
             liveLink: "https://vgc12.itch.io/sword-bound",
             githubLink: "https://github.com/vgc12/SwordBound"
+        },
+        {
+            id: 4,
+            title: "Fours!",
+            description: "A 2D puzzle game created in Unity Engine where players must rotate groups of 4 squares with a limited number of moves to make the board match a pattern",
+            image: "src/assets/fours.png",
+            tags: ["Unity Engine", "C#", "2D"],
+            liveLink: "https://github.com/vgc12/fours",
+            githubLink: "https://github.com/vgc12/fours"
+        },
+        {
+            id: 5,
+            title: "Pan VST3 Plugin",
+            description: "A plugin for Digital Audio Workstations that enables panning of tracks. Created using the JUCE framework in conjunction with Open GL and written in C++",
+            image: "src/assets/pan.png",
+            tags: ["Graphics Programming", "C++", "Audio Programming"],
+            liveLink: "https://github.com/vgc12/pan-plugin",
+            githubLink: "https://github.com/vgc12/pan-plugin"
+        },
+        {
+            id : 6,
+            title: "Backup Scheduler",
+            description: "A command line tool that schedules backups for files and folders and converts them into a zip folder at a given directory.",
+            image: "src/assets/backup-scheduler.png",
+            tags: ["C#", "CLI", "File Management"],
+            liveLink: "https://github.com/vgc12/backup-scheduler",
+            githubLink: "https://github.com/vgc12/backup-scheduler"
         }
     ]);
 
