@@ -22,6 +22,7 @@ interface Project {
     id: number;
     title: string;
     description: string;
+    type: 'Web' | 'Game' | 'Other';
     image: string;
     tags: string[];
     liveLink: string;
@@ -139,7 +140,7 @@ const ProjectCard = ({ project, isDark }: ProjectCardProps) => (
             ? 'bg-slate-800/50 backdrop-blur-sm border-blue-500/30 hover:border-blue-400 hover:shadow-blue-500/50'
             : 'bg-white border-gray-200 hover:border-blue-500 hover:shadow-blue-500/30'
     }`}>
-        <div className="h-48 overflow-hidden">
+        <div className="h-60 overflow-hidden">
             <img
                 src={project.image}
                 alt={project.title}
@@ -203,17 +204,21 @@ interface ProjectsSectionProps {
 
 const ProjectsSection = ({ projects, isDark }: ProjectsSectionProps) => (
     <div className="mb-12">
-        <h2 className={`text-4xl font-bold text-center mb-12 ${
-            isDark ? 'text-white' : 'text-gray-900'
-        }`}>
-            My Projects
-        </h2>
+        {["Game" , "Web" , "Other"].map(type => (
+            <div key={type} className="mb-8">
+                <h2 className={`text-3xl font-semibold mb-6 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                }`}>
+                    {type} Projects
+                </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.filter(project => project.type === type).map(project => (
+                        <ProjectCard key={project.id} project={project} isDark={isDark} />
+                    ))}
+                </div>
+            </div>
+        ))}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map(project => (
-                <ProjectCard key={project.id} project={project} isDark={isDark} />
-            ))}
-        </div>
     </div>
 );
 
@@ -267,26 +272,29 @@ export default function Portfolio() {
         {
             id: 1,
             title: "WebGPU 3D Renderer",
-            description: "Developed a real-time 3D renderer in React and WebGPU, implementing deferred and physically based rendering " +
-                "(PBR) techniques lighting to achieve realistic shading. Designed the project with modular TypeScript architecture " +
+            type : "Web",
+            description: "Developed a real-time 3D renderer in React and WebGPU, the successor to WebGL. this project implements deferred and physically based rendering " +
+                "(PBR) techniques lighting to achieve realistic shading. Designed the project with modular architecture in TypeScript" +
                 "for maintainability and scalability.",
             image: "src/assets/webgpu-renderer.png",
-            tags: ["WebGPU", "Graphics Programming", "Shader Programming", "Web Development"],
+            tags: ["WebGPU", "Graphics Programming", "WGSL", "TypeScript", "React", "Tailwind CSS"],
             liveLink: "https://webgpu-renderer.vercel.app/",
             githubLink: "https://github.com/vgc12/webgpu-renderer"
         },
         {
             id: 2,
             title: "VANDULL",
+            type : "Game",
             description: "A first person stealth shooter game made in unity. Created using a custom shader and modular C# architecture",
             image: "src/assets/vandull.png",
-            tags: ["Unity Engine", "C#", "3D", "Shader Programming"],
+            tags: ["Unity Engine", "C#", "3D", "HLSL"],
             liveLink: "https://vgc12.itch.io/vandull",
             githubLink: "https://github.com/vgc12/vandull"
         },
         {
             id: 3,
             title: "Sword Bound",
+            type : "Game",
             description: "A 2D platformer made in Unity Engine. Using a mouse in a drag-and-release movement, players control the sword to aim and launch the sword upwards to scale platforms. " +
                 "Players must precisely aim their jumps to avoid falling back down the tower or being knocked down by tower guards. \n",
             image: "src/assets/sword-bound.png",
@@ -297,6 +305,7 @@ export default function Portfolio() {
         {
             id: 4,
             title: "Fours!",
+            type : "Game",
             description: "A 2D puzzle game created in Unity Engine where players must rotate groups of 4 squares with a limited number of moves to make the board match a pattern",
             image: "src/assets/fours.png",
             tags: ["Unity Engine", "C#", "2D"],
@@ -306,20 +315,44 @@ export default function Portfolio() {
         {
             id: 5,
             title: "Pan VST3 Plugin",
+            type : "Other",
             description: "A plugin for Digital Audio Workstations that enables panning of tracks. Created using the JUCE framework in conjunction with Open GL and written in C++",
             image: "src/assets/pan.png",
-            tags: ["Graphics Programming", "C++", "Audio Programming"],
+            tags: ["Graphics Programming", "Open GL", "GLSL", "C++", "Audio Programming"],
             liveLink: "https://github.com/vgc12/pan-plugin",
             githubLink: "https://github.com/vgc12/pan-plugin"
         },
         {
             id : 6,
             title: "Backup Scheduler",
+            type : "Other",
             description: "A command line tool that schedules backups for files and folders and converts them into a zip folder at a given directory.",
             image: "src/assets/backup-scheduler.png",
             tags: ["C#", "CLI", "File Management"],
             liveLink: "https://github.com/vgc12/backup-scheduler",
             githubLink: "https://github.com/vgc12/backup-scheduler"
+        },
+        {
+            id: 7,
+            title: "C# tutorial site",
+            type: "Web",
+            description: "A tutorial website for learning C# programming concepts from basics to advanced topics. The site contains 3 Chapters and a Quiz for each chapter." +
+                " As well as interactive coding blocks for users to practice coding directly on the site.",
+            image: "src/assets/tutorial-site.png",
+            tags: ["HTML", "CSS", "JavaScript", "C#"],
+            liveLink: "https://vgc12.github.io/csharp-tutorial-site/chapter1.html",
+            githubLink: "https://github.com/vgc12/csharp-tutorial-site"
+        },
+        {
+            id: 8,
+            title: "Student Attendance Tracker",
+            type: "Web",
+            description: "A web application for tracking student attendance in classes. Features include adding/removing students, marking attendance, and generating reports.",
+            image: "src/assets/attendance-tracker.png",
+            tags: ["C#", "ASP.NET", "Entity Framework", "SQL", "HTML", "CSS", "JavaScript"],
+            liveLink: "https://github.com/vgc12/StudentAttendanceTracker",
+            githubLink: "https://github.com/vgc12/StudentAttendanceTracker",
+
         }
     ]);
 
