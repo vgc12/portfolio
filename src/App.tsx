@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Mail, ExternalLink, Moon, Sun } from 'lucide-react';
-
+import profileImage from '@/assets/zaid-abuisba.jpg';
+import webgpuImage from '@/assets/webgpu-renderer.png';
+import vandullImage from '@/assets/vandull.png';
+import swordBoundImage from '@/assets/sword-bound.png';
+import foursImage from '@/assets/fours.png';
+import panImage from '@/assets/pan.png';
+import backupImage from '@/assets/backup-scheduler.png';
+import tutorialImage from '@/assets/tutorial-site.png';
+import attendanceImage from '@/assets/attendance-tracker.png';
 
 // Types
 
@@ -260,7 +268,7 @@ export default function Portfolio() {
         name: "Zaid Abuisba",
         title: "Game Developer & Software Engineering Student",
         bio: "Passionate about creating immersive gaming experiences through code. Currently studying software development with a focus on game design and interactive media.",
-        imageUrl: "src/assets/zaid-abuisba.jpg",
+        imageUrl: profileImage, // Changed
         socialLinks: [
             { href: "https://github.com/vgc12", icon: GithubIcon, label: "GitHub" },
             { href: "https://www.linkedin.com/in/zaid-abuisba-ab088826a/", icon: LinkedinIcon, label: "LinkedIn" },
@@ -268,15 +276,14 @@ export default function Portfolio() {
         ]
     };
 
+
     const [projects] = useState<Project[]>([
         {
             id: 1,
             title: "WebGPU 3D Renderer",
-            type : "Web",
-            description: "Developed a real-time 3D renderer in React and WebGPU, the successor to WebGL. this project implements deferred and physically based rendering " +
-                "(PBR) techniques lighting to achieve realistic shading. Designed the project with modular architecture in TypeScript" +
-                "for maintainability and scalability.",
-            image: "src/assets/webgpu-renderer.png",
+            type: "Web",
+            description: "Developed a real-time 3D renderer in React and WebGPU...",
+            image: webgpuImage, // Changed
             tags: ["WebGPU", "Graphics Programming", "WGSL", "TypeScript", "React", "Tailwind CSS"],
             liveLink: "https://webgpu-renderer.vercel.app/",
             githubLink: "https://github.com/vgc12/webgpu-renderer"
@@ -284,9 +291,9 @@ export default function Portfolio() {
         {
             id: 2,
             title: "VANDULL",
-            type : "Game",
-            description: "A first person stealth shooter game made in unity. Created using a custom shader and modular C# architecture",
-            image: "src/assets/vandull.png",
+            type: "Game",
+            description: "A first person stealth shooter game made in unity...",
+            image: vandullImage, // Changed
             tags: ["Unity Engine", "C#", "3D", "HLSL"],
             liveLink: "https://vgc12.itch.io/vandull",
             githubLink: "https://github.com/vgc12/vandull"
@@ -294,10 +301,9 @@ export default function Portfolio() {
         {
             id: 3,
             title: "Sword Bound",
-            type : "Game",
-            description: "A 2D platformer made in Unity Engine. Using a mouse in a drag-and-release movement, players control the sword to aim and launch the sword upwards to scale platforms. " +
-                "Players must precisely aim their jumps to avoid falling back down the tower or being knocked down by tower guards. \n",
-            image: "src/assets/sword-bound.png",
+            type: "Game",
+            description: "A 2D platformer made in Unity Engine...",
+            image: swordBoundImage, // Changed
             tags: ["Unity Engine", "C#", "2D"],
             liveLink: "https://vgc12.itch.io/sword-bound",
             githubLink: "https://github.com/vgc12/SwordBound"
@@ -305,9 +311,9 @@ export default function Portfolio() {
         {
             id: 4,
             title: "Fours!",
-            type : "Game",
-            description: "A 2D puzzle game created in Unity Engine where players must rotate groups of 4 squares with a limited number of moves to make the board match a pattern",
-            image: "src/assets/fours.png",
+            type: "Game",
+            description: "A 2D puzzle game created in Unity Engine...",
+            image: foursImage, // Changed
             tags: ["Unity Engine", "C#", "2D"],
             liveLink: "https://github.com/vgc12/fours",
             githubLink: "https://github.com/vgc12/fours"
@@ -315,19 +321,19 @@ export default function Portfolio() {
         {
             id: 5,
             title: "Pan VST3 Plugin",
-            type : "Other",
-            description: "A plugin for Digital Audio Workstations that enables panning of tracks. Created using the JUCE framework in conjunction with Open GL and written in C++",
-            image: "src/assets/pan.png",
+            type: "Other",
+            description: "A plugin for Digital Audio Workstations...",
+            image: panImage, // Changed
             tags: ["Graphics Programming", "Open GL", "GLSL", "C++", "Audio Programming"],
             liveLink: "https://github.com/vgc12/pan-plugin",
             githubLink: "https://github.com/vgc12/pan-plugin"
         },
         {
-            id : 6,
+            id: 6,
             title: "Backup Scheduler",
-            type : "Other",
-            description: "A command line tool that schedules backups for files and folders and converts them into a zip folder at a given directory.",
-            image: "src/assets/backup-scheduler.png",
+            type: "Other",
+            description: "A command line tool that schedules backups...",
+            image: backupImage, // Changed
             tags: ["C#", "CLI", "File Management"],
             liveLink: "https://github.com/vgc12/backup-scheduler",
             githubLink: "https://github.com/vgc12/backup-scheduler"
@@ -336,9 +342,8 @@ export default function Portfolio() {
             id: 7,
             title: "C# tutorial site",
             type: "Web",
-            description: "A tutorial website for learning C# programming concepts from basics to advanced topics. The site contains 3 Chapters and a Quiz for each chapter." +
-                " As well as interactive coding blocks for users to practice coding directly on the site.",
-            image: "src/assets/tutorial-site.png",
+            description: "A tutorial website for learning C# programming...",
+            image: tutorialImage, // Changed
             tags: ["HTML", "CSS", "JavaScript", "C#"],
             liveLink: "https://vgc12.github.io/csharp-tutorial-site/chapter1.html",
             githubLink: "https://github.com/vgc12/csharp-tutorial-site"
@@ -347,12 +352,11 @@ export default function Portfolio() {
             id: 8,
             title: "Student Attendance Tracker",
             type: "Web",
-            description: "A web application for tracking student attendance in classes. Features include adding/removing students, marking attendance, and generating reports.",
-            image: "src/assets/attendance-tracker.png",
+            description: "A web application for tracking student attendance...",
+            image: attendanceImage, // Changed
             tags: ["C#", "ASP.NET", "Entity Framework", "SQL", "HTML", "CSS", "JavaScript"],
             liveLink: "https://github.com/vgc12/StudentAttendanceTracker",
-            githubLink: "https://github.com/vgc12/StudentAttendanceTracker",
-
+            githubLink: "https://github.com/vgc12/StudentAttendanceTracker"
         }
     ]);
 
