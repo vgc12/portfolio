@@ -5,14 +5,14 @@ import path from "path";
 
 export default defineConfig(() =>
 {
-  const base = '/portfolio/'
+
 
   return {
     plugins: [
       tailwindcss(),
       react(),
     ],
-    base: base,
+    base: "/portfolio/",
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src")
