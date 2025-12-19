@@ -5,7 +5,7 @@ import path from "path";
 
 export default defineConfig(() =>
 {
-  const base = '/'
+  const base = '/portfolio/'
 
   return {
     plugins: [

@@ -1,9 +1,6 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
+
+
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -30,7 +27,7 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "types": ["vite/client","@webgpu/types"],
+    "types": ["vite/client"],
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
