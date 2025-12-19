@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, ExternalLink, Moon, Sun } from 'lucide-react';
-import profileImage from '@/assets/zaid-abuisba.jpg';
-import webgpuImage from '@/assets/webgpu-renderer.png';
-import vandullImage from '@/assets/vandull.png';
-import swordBoundImage from '@/assets/sword-bound.png';
-import foursImage from '@/assets/fours.png';
-import panImage from '@/assets/pan.png';
-import backupImage from '@/assets/backup-scheduler.png';
-import tutorialImage from '@/assets/tutorial-site.png';
-import attendanceImage from '@/assets/attendance-tracker.png';
 
-// Types
+
+const bucketUrl = 'https://zaid-abuisba-portfolio-images.s3.us-east-2.amazonaws.com/';
 
 interface SocialLinkData {
     href: string;
@@ -268,7 +260,7 @@ export default function Portfolio() {
         name: "Zaid Abuisba",
         title: "Game Developer & Software Engineering Student",
         bio: "Passionate about creating immersive gaming experiences through code. Currently studying software development with a focus on game design and interactive media.",
-        imageUrl: profileImage, // Changed
+        imageUrl: bucketUrl + 'zaid-abuisba.jpg', // Changed
         socialLinks: [
             { href: "https://github.com/vgc12", icon: GithubIcon, label: "GitHub" },
             { href: "https://www.linkedin.com/in/zaid-abuisba-ab088826a/", icon: LinkedinIcon, label: "LinkedIn" },
@@ -283,7 +275,7 @@ export default function Portfolio() {
             title: "WebGPU 3D Renderer",
             type: "Web",
             description: "Developed a real-time 3D renderer in React and WebGPU...",
-            image: webgpuImage, // Changed
+            image: bucketUrl + 'webgpu-renderer.png', // Changed
             tags: ["WebGPU", "Graphics Programming", "WGSL", "TypeScript", "React", "Tailwind CSS"],
             liveLink: "https://webgpu-renderer.vercel.app/",
             githubLink: "https://github.com/vgc12/webgpu-renderer"
@@ -293,7 +285,7 @@ export default function Portfolio() {
             title: "VANDULL",
             type: "Game",
             description: "A first person stealth shooter game made in unity...",
-            image: vandullImage, // Changed
+            image: bucketUrl + 'vandull.png', // Changed
             tags: ["Unity Engine", "C#", "3D", "HLSL"],
             liveLink: "https://vgc12.itch.io/vandull",
             githubLink: "https://github.com/vgc12/vandull"
@@ -303,7 +295,7 @@ export default function Portfolio() {
             title: "Sword Bound",
             type: "Game",
             description: "A 2D platformer made in Unity Engine...",
-            image: swordBoundImage, // Changed
+            image: bucketUrl + 'sword-bound.png', // Changed
             tags: ["Unity Engine", "C#", "2D"],
             liveLink: "https://vgc12.itch.io/sword-bound",
             githubLink: "https://github.com/vgc12/SwordBound"
@@ -313,7 +305,7 @@ export default function Portfolio() {
             title: "Fours!",
             type: "Game",
             description: "A 2D puzzle game created in Unity Engine...",
-            image: foursImage, // Changed
+            image: bucketUrl + 'fours.png', // Changed
             tags: ["Unity Engine", "C#", "2D"],
             liveLink: "https://github.com/vgc12/fours",
             githubLink: "https://github.com/vgc12/fours"
@@ -323,7 +315,7 @@ export default function Portfolio() {
             title: "Pan VST3 Plugin",
             type: "Other",
             description: "A plugin for Digital Audio Workstations...",
-            image: panImage, // Changed
+            image: bucketUrl + 'pan.png', // Changed
             tags: ["Graphics Programming", "Open GL", "GLSL", "C++", "Audio Programming"],
             liveLink: "https://github.com/vgc12/pan-plugin",
             githubLink: "https://github.com/vgc12/pan-plugin"
@@ -333,7 +325,7 @@ export default function Portfolio() {
             title: "Backup Scheduler",
             type: "Other",
             description: "A command line tool that schedules backups...",
-            image: backupImage, // Changed
+            image: bucketUrl + 'backup-scheduler.png', // Changed
             tags: ["C#", "CLI", "File Management"],
             liveLink: "https://github.com/vgc12/backup-scheduler",
             githubLink: "https://github.com/vgc12/backup-scheduler"
@@ -343,7 +335,7 @@ export default function Portfolio() {
             title: "C# tutorial site",
             type: "Web",
             description: "A tutorial website for learning C# programming...",
-            image: tutorialImage, // Changed
+            image: bucketUrl + 'tutorial-site.png', // Changed
             tags: ["HTML", "CSS", "JavaScript", "C#"],
             liveLink: "https://vgc12.github.io/csharp-tutorial-site/chapter1.html",
             githubLink: "https://github.com/vgc12/csharp-tutorial-site"
@@ -353,7 +345,7 @@ export default function Portfolio() {
             title: "Student Attendance Tracker",
             type: "Web",
             description: "A web application for tracking student attendance...",
-            image: attendanceImage, // Changed
+            image: bucketUrl + 'attendance-tracker.png', // Changed
             tags: ["C#", "ASP.NET", "Entity Framework", "SQL", "HTML", "CSS", "JavaScript"],
             liveLink: "https://github.com/vgc12/StudentAttendanceTracker",
             githubLink: "https://github.com/vgc12/StudentAttendanceTracker"
