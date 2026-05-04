@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Mail, ExternalLink, Moon, Sun, Github, Linkedin } from 'lucide-react';
 
 
@@ -239,6 +239,10 @@ const Footer = ({ name, isDark }: FooterProps) => (
 
 export default function Portfolio() {
     const [isDark, setIsDark] = useState(true);
+
+    useEffect(() => {
+        document.documentElement.style.backgroundColor = isDark ? '#0f172a' : '#eff6ff';
+    }, [isDark]);
 
     const profileData: ProfileData = {
         name: "Zaid Abuisba",

@@ -8,7 +8,7 @@ export default defineConfig({
         tailwindcss(),
         react(),
     ],
-    base: "/",
+    base: process.env.GH_PAGES ? "/portfolio/" : "/",
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src")
