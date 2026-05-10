@@ -310,7 +310,7 @@ export default function Portfolio() {
             description: "A 2D puzzle game created in Unity Engine where players must rotate groups of 4 squares with a limited number of moves to make the board match a pattern.",
             image: bucketUrl + 'fours.png',
             tags: ["Unity Engine", "C#", "2D"],
-            liveLink: "https://github.com/vgc12/fours",
+            liveLink: "https://itch.io/vgc12/fours",
             githubLink: "https://github.com/vgc12/fours"
         },
         {
